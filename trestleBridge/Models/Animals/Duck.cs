@@ -7,10 +7,10 @@ using trestleBridge.Interfaces;
 
 namespace trestleBridge.Models.Animals
 {
-    public class Pig : IResource, IGrazing, IMeatProducing
+    public class Duck : IResource, IGrazing
     {
         private Guid _id = Guid.NewGuid();
-        private double _meatProduced = 8.4;
+
         private string _shortId
         {
             get
@@ -18,26 +18,20 @@ namespace trestleBridge.Models.Animals
                 return this._id.ToString().Substring(this._id.ToString().Length - 6);
             }
         }
-
-        public double GrassPerDay { get; set; } = 3.2;
-        public string Type { get; } = "Pig";
+        public double GrassPerDay { get; set; } = .8;
+        public string Type { get; } = "Duck";
         object IResource.Type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         string IGrazing.Type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        string IMeatProducing.Type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         // Methods
         public void Graze()
         {
-            Console.WriteLine($"Pig {this._shortId} just ate {this.GrassPerDay}kg of slob");
+            Console.WriteLine($"Ostrich {this._shortId} just ate {this.GrassPerDay}kg of grass");
         }
 
-        public double Butcher()
+        public override string ToString()
         {
-            return _meatProduced;
-        }
-        public string ToString()
-        {
-            return $"Pig {this._shortId}. Oink!!!";
+            return $"Ostrich {this._shortId}. Squack!";
         }
 
         public void Resource()
