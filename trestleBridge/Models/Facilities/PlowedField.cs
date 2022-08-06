@@ -7,10 +7,10 @@ using trestleBridge.Interfaces;
 
 namespace trestleBridge.Models.Facilities
 {
-    public class NaturalField : IFacility<IFlower>
+    public class PlowedField : IFacility<IFlower>
     {
-        private int _rows = 10;
-        private int _plantsPerRow = 6;
+        private int _rows = 13;
+        private int _plantsPerRow = 5;
         private Guid _id = Guid.NewGuid();
 
         private List<IFlower> _flowers = new List<IFlower>();
@@ -46,9 +46,9 @@ namespace trestleBridge.Models.Facilities
         {
             StringBuilder output = new StringBuilder();
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
-            output.Append($"Natural field {shortId} has {Rows} rows of plants\n");
+            output.Append($"Plowed field {shortId} has {Rows} rows of plants\n");
             this._flowers.ForEach(a => output.Append($"   {a}\n"));
             return output.ToString();
         }
     }
-}
+};

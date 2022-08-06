@@ -20,7 +20,14 @@ namespace trestleBridge.Actions
                     break;
                 default:
                     break;
+            
+                case 2:
+                    farm.AddPlowedField(new PlowedField());
+                break;
+                
+                   
             }
+
         }
     }
 }

@@ -29,6 +29,11 @@ namespace trestleBridge
             }
         }
 
+        internal void AddPlowedField(PlowedField plowedField)
+        {
+            throw new NotImplementedException();
+        }
+
         public void AddGrazingField(GrazingField field)
         {
             GrazingFields.Add(field);
@@ -42,5 +47,7 @@ namespace trestleBridge
 
             return report.ToString();
         }
+
+
     }
 }
