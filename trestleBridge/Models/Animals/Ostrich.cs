@@ -21,6 +21,9 @@ namespace trestleBridge.Models.Animals
         }
         public double GrassPerDay { get; set; } = 2.3;
         public string Type { get; } = "Ostrich";
+        object IResource.Type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string IGrazing.Type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string IMeatProducing.Type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         // Methods
         public void Graze()
@@ -36,6 +39,11 @@ namespace trestleBridge.Models.Animals
         public override string ToString()
         {
             return $"Ostrich {this._shortId}. Squack!";
+        }
+
+        public void Resource()
+        {
+            throw new NotImplementedException();
         }
     }
 }
