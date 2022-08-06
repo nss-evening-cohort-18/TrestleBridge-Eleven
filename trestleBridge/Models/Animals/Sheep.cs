@@ -10,7 +10,7 @@ namespace trestleBridge.Models.Animals
     public class Sheep : IResource, IGrazing, IMeatProducing
     {
         private Guid _id = Guid.NewGuid();
-        private double _meatProduced = 18.25;
+        private double _meatProduced = 5;
         private string _shortId
         {
             get
@@ -19,7 +19,7 @@ namespace trestleBridge.Models.Animals
             }
         }
 
-        public double GrassPerDay { get; set; } = 5.4;
+        public double GrassPerDay { get; set; } = 4;
         public string Type { get; } = "Sheep";
         object IResource.Type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         string IGrazing.Type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
@@ -37,7 +37,7 @@ namespace trestleBridge.Models.Animals
         }
         public string ToString()
         {
-            return $"Cow {this._shortId}. Mooo!";
+            return $"Sheep {this._shortId}. Bahhhh!";
         }
 
         public void Resource()
