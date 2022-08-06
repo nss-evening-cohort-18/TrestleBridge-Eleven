@@ -10,6 +10,7 @@ namespace trestleBridge.Interfaces
     {
        
         public string Type { get; set; }
-        
+
+        public double Butcher();
     }
 }
