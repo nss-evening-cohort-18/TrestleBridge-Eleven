@@ -22,8 +22,8 @@ namespace trestleBridge.Models.Animals
         public double GrassPerDay { get; set; } = 5.4;
         public string Type { get; } = "Cow";
         object IResource.Type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        string IGrazing.Type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        string IMeatProducing.Type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string IGrazing.Type { get; set; }
+        string IMeatProducing.Type { get; set; }
 
         // Methods
         public void Graze()

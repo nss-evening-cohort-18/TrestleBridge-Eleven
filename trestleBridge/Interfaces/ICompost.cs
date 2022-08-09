@@ -9,5 +9,8 @@ namespace trestleBridge.Interfaces
     internal interface ICompost
     {
         public string Type { get; set; }
+
+        public double Compost();
     }
+
 }
