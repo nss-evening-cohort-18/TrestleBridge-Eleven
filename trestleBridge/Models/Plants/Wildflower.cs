@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace trestleBridge.Models.Plants
 {
-    internal class Widflower
+    internal class Wildflower
     {
     }
 }
