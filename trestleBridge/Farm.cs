@@ -24,14 +24,62 @@ namespace trestleBridge
                 case "Cow":
                     GrazingFields[index].AddResource((IGrazing)resource);
                     break;
+
                 default:
                     break;
             }
         }
 
-        internal void AddPlowedField(PlowedField plowedField)
+        public List<PlowedField> PlowedFields { get; } = new List<PlowedField>();
+
+        public void PlowedFieldResource<T>(IResource resource, int index)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(typeof(T).ToString());
+            switch (typeof(T).ToString())
+            {
+                case "Sunflower":
+                    PlowedFields[index].AddResource((IFlower)resource);
+                    break;
+                case "Sesame":
+                    PlowedFields[index].AddResource((IFlower)resource);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public List<NaturalField> NaturalFields { get; } = new List<NaturalField>();
+
+        /*
+            This method must specify the correct product interface of the
+            resource being purchased.
+         */
+        public void NaturalFieldResource<T>(IResource resource, int index)
+        {
+            Console.WriteLine(typeof(T).ToString());
+            switch (typeof(T).ToString())
+            {
+                case "Sunflower":
+                    NaturalFields[index].AddResource((IFlower)resource);
+                    break;
+                case "Wildflower":
+                    NaturalFields[index].AddResource((IFlower)resource);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public void AddNaturalField(NaturalField naturalField)
+        {
+
+            NaturalFields.Add(naturalField);
+        }
+
+        public void AddPlowedField(PlowedField plowedField)
+        {
+            
+            PlowedFields.Add(plowedField);
         }
 
         public void AddGrazingField(GrazingField field)
