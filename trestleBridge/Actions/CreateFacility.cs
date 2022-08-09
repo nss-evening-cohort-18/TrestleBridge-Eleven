@@ -10,6 +10,9 @@ namespace trestleBridge.Actions
             Console.WriteLine ("1. Grazing field");
             Console.WriteLine ("2. Plowed field");
             Console.WriteLine ("3. Natural field");
+            Console.WriteLine("2. Chicken house");
+            Console.WriteLine("3. Duck House");
+            Console.WriteLine();
             Console.WriteLine ("Choose what you want to create");
             Console.Write ("> ");
             string input = Console.ReadLine ();
@@ -27,6 +30,14 @@ namespace trestleBridge.Actions
 
                 case 3:
                     farm.AddNaturalField(new NaturalField());
+                    break;
+
+                case 5:
+                    farm.AddChickenHouse(new ChickenHouse());
+                    break;
+
+                case 6:
+                    farm.AddDuckHouse(new DuckHouse());
                     break;
 
 
