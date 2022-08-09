@@ -44,6 +44,7 @@ static void Start()
         }
         else if (option == "3")
         {
+            Console.Clear();
             DisplayBanner();
             PurchaseSeed.CollectInput(Trestlebridge);
         }
