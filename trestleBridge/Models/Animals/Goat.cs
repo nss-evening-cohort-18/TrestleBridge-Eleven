@@ -19,15 +19,20 @@ namespace trestleBridge.Models.Animals
             }
         }
 
-        public double GrassPerDay { get; set; } = 5.4;
+        public double GrassPerDay { get; set; } = 4.1;
         public string Type { get; } = "Goat";
         object IResource.Type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        string IGrazing.Type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        string ICompost.Type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string IGrazing.Type { get; set; }
+        string ICompost.Type { get; set; }
 
         public void Graze()
         {
             Console.WriteLine($"Goat {this._shortId} just ate {this.GrassPerDay}kg of grass");
+        }
+
+        public double Compost()
+        {
+            return _compostProduced;
         }
 
         public string ToString()
