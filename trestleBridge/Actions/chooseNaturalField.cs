@@ -3,7 +3,7 @@ using trestleBridge.Interfaces;
 
 namespace trestleBridge.Actions
 {
-    public class chooseNaturalField
+    public class ChooseNaturalField
     {
         public static void CollectInput(Farm farm, IFlower flower)
         {
