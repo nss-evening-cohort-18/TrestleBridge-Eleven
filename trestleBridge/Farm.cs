@@ -70,6 +70,58 @@ namespace trestleBridge
             }
         }
 
+        public List<ChickenHouse> ChickenHouses { get; } = new List<ChickenHouse>();
+
+        /*
+            This method must specify the correct product interface of the
+            resource being purchased.
+         */
+        public void CHFieldResource<T>(IResource resource, int index)
+        {
+            Console.WriteLine(typeof(T).ToString());
+            switch (typeof(T).ToString())
+            {
+                case "Chicken":
+                    ChickenHouses[index].AddResource((IGrazing)resource);
+                    break;
+                
+                default:
+                    break;
+            }
+        }
+
+        public List<DuckHouse> DuckHouses { get; } = new List<DuckHouse>();
+
+        /*
+            This method must specify the correct product interface of the
+            resource being purchased.
+         */
+        public void DHFieldResource<T>(IResource resource, int index)
+        {
+            Console.WriteLine(typeof(T).ToString());
+            switch (typeof(T).ToString())
+            {
+                case "Duck":
+                    DuckHouses[index].AddResource((IGrazing)resource);
+                    break;
+                
+                default:
+                    break;
+            }
+        }
+
+        public void AddChickenHouse(ChickenHouse ch)
+        {
+
+            ChickenHouses.Add(ch);
+        }
+
+        public void AddDuckHouse(DuckHouse dh)
+        {
+
+            DuckHouses.Add(dh);
+        }
+
         public void AddNaturalField(NaturalField naturalField)
         {
 
