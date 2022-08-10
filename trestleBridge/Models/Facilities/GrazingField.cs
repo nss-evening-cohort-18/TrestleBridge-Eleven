@@ -10,7 +10,7 @@ namespace trestleBridge.Models.Facilities
     public class GrazingField : IFacility<IGrazing>
     {
         private int _capacity = 50;
-        private Guid _id = Guid.NewGuid();
+        public Guid _id { get;} = Guid.NewGuid();
 
         private List<IGrazing> _animals = new List<IGrazing>();
 
@@ -24,10 +24,15 @@ namespace trestleBridge.Models.Facilities
 
         public void AddResource(IGrazing animal)
         {
-            // TODO: implement this...
-            throw new NotImplementedException();
+            try
+            {
+                _animals.Add(animal);
+            }
+            catch
+            {
+                Console.WriteLine("This animal doesn't belong in this field!");
+            }
         }
-
         public void AddResource(List<IGrazing> animals)
         {
             // TODO: implement this...
