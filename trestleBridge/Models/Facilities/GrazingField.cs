@@ -24,14 +24,8 @@ namespace trestleBridge.Models.Facilities
 
         public void AddResource(IGrazing animal)
         {
-            try
-            {
-                _animals.Add(animal);
-            }
-            catch
-            {
-                Console.WriteLine("This animal doesn't belong in this field!");
-            }
+                _animals.Add(animal);      
+            
         }
         public void AddResource(List<IGrazing> animals)
         {
