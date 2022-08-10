@@ -20,9 +20,7 @@ namespace trestleBridge.Actions
             {
                 case 1:
                     farm.AddGrazingField(new GrazingField());
-                    break;
-                default:
-                    break;
+                    break;                
             
                 case 2:
                     farm.AddPlowedField(new PlowedField());
@@ -32,14 +30,15 @@ namespace trestleBridge.Actions
                     farm.AddNaturalField(new NaturalField());
                     break;
 
-                case 5:
+                case 4:
                     farm.AddChickenHouse(new ChickenHouse());
                     break;
 
-                case 6:
+                case 5:
                     farm.AddDuckHouse(new DuckHouse());
                     break;
-
+                default:
+                    break;
 
             }
 
