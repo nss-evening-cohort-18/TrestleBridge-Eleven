@@ -138,15 +138,23 @@ namespace trestleBridge
         {
             GrazingFields.Add(field);
         }
+                
 
         public override string ToString()
         {
             StringBuilder report = new StringBuilder();
 
             GrazingFields.ForEach(gf => report.Append(gf));
+            NaturalFields.ForEach(nf => report.Append(nf));
+            PlowedFields.ForEach(pf => report.Append(pf));
+            ChickenHouses.ForEach(ch => report.Append(ch));
+            DuckHouses.ForEach(dh => report.Append(dh));
+
 
             return report.ToString();
         }
+
+
 
 
     }
