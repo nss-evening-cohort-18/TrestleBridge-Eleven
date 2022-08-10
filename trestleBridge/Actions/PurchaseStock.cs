@@ -30,10 +30,11 @@ namespace trestleBridge.Actions
                     ChooseGrazingField.CollectInput(farm, new Ostrich());
                     break;
                 case 3:
-                    ChooseGrazingField.CollectInput(farm, new Chicken());
+                    //Change Duck House to Chicken House when such a thing exists
+                    ChooseDuckHouse.CollectInput(farm, new Chicken());
                     break;
                 case 4:
-                    ChooseGrazingField.CollectInput(farm, new Duck());
+                    ChooseDuckHouse.CollectInput(farm, new Duck());
                     break;
                 case 5:
                     ChooseGrazingField.CollectInput(farm, new Goat());
