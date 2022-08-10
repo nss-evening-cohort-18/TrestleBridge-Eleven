@@ -17,21 +17,21 @@ namespace trestleBridge.Actions
             Console.Write("> ");
             string choice = Console.ReadLine();
 
-            /*
+            
                 switch (Int32.Parse(choice))
                 {
                     case 1:
-                        ChoosePlantingField.CollectInput(farm, new Sunflower());
+                        ChoosePlowedField.CollectInput(farm, new Sunflower());
                         break;
                     case 2:
-                        ChoosePlantingField.CollectInput(farm, new Wildflower());
+                        ChoosePlowedField.CollectInput(farm, new Wildflower());
                         break;
                     case 3:
-                        ChoosePlantingField.CollectInput(farm, new Sesame());
+                        ChoosePlowedField.CollectInput(farm, new Sesame());
                         break;
                     default:
                         break;
-                }*/
+                }
         }
     }  
 };
