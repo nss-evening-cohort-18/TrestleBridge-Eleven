@@ -34,7 +34,7 @@ namespace trestleBridge.Models.Facilities
         public void AddResource(IFlower flowers)
         {
             // TODO: implement this...
-            throw new NotImplementedException();
+            _flowers.Add(flowers);
         }
 
         public void AddResource(List<IFlower> flowers)
@@ -46,7 +46,7 @@ namespace trestleBridge.Models.Facilities
         {
             StringBuilder output = new StringBuilder();
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
-            output.Append($"Plowed field {shortId} has {Rows} rows of plants\n");
+            output.Append($"Plowed field {shortId} has {_flowers.Count} rows of plants\n");
             this._flowers.ForEach(a => output.Append($"   {a}\n"));
             return output.ToString();
         }

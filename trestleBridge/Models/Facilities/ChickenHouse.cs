@@ -25,7 +25,7 @@ namespace trestleBridge.Models.Facilities
         public void AddResource(IGrazing animal)
         {
             // TODO: implement this...
-            throw new NotImplementedException();
+            _animals.Add(animal);
         }
 
         public void AddResource(List<IGrazing> animals)
@@ -37,7 +37,7 @@ namespace trestleBridge.Models.Facilities
         {
             StringBuilder output = new StringBuilder();
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
-            output.Append($"Grazing field {shortId} has {this._animals.Count} animals\n");
+            output.Append($"Chicken House {shortId} has {this._animals.Count} chickenheads\n");
             this._animals.ForEach(a => output.Append($"   {a}\n"));
             return output.ToString();
         }

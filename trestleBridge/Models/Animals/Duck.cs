@@ -44,7 +44,7 @@ namespace trestleBridge.Models.Animals
 
         public override string ToString()
         {
-            return $"Ostrich {this._shortId}. Squack!";
+            return $"Duck {this._shortId}. Quack!";
         }
 
         public void Resource()
