@@ -14,7 +14,7 @@ namespace trestleBridge.Actions
             }
             Console.WriteLine();
             // How can I output the type of animal chosen here?
-            Console.WriteLine(value: $"Place {animal.Type.ToString()} where?");
+            Console.WriteLine(value: $"Place {animal.Type} where?");
 
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
