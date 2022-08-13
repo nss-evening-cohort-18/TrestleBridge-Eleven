@@ -8,10 +8,9 @@ namespace trestleBridge.Interfaces
 {
     public interface IFlower
     {
-        public string Location { get; set; }
-        public string Product { get; set; }
-        public double Amount { get; set; }
+        public int Amount { get; set; }
         public string Type { get; set; }
         //void Graze();
+        void Flower();
     }
 }

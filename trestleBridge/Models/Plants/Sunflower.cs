@@ -7,12 +7,13 @@ using trestleBridge.Interfaces;
 
 namespace trestleBridge.Models.Plants
 {
-    /*
-    public class Sunflower : IResource, ISeedProducing, IFlower, ICompost
+    
+    public class Sunflower : IResource, IFlower, ISeedProducing, ICompost
     {
         private Guid _id = Guid.NewGuid();
-        private double _seed = 650;
-        private double _compost = 30.3;
+        private string _location = "Plowed Field or Natural Field";
+        private double _seeds = 650;
+        private double _amount = 21.6;
         
         private string _shortId
         {
@@ -23,10 +24,32 @@ namespace trestleBridge.Models.Plants
         }
 
         public string Type { get; } = "Sunflower";
-        object IResource.Type { get = throw new NotImplementedException(); set = throw new NotImplementedException(); }
-        string ISeedProducing.Type { get; set; }
+        object IResource.Type { get; set; }
+        object ISeedProducing.Type { get; set; }
+        int IFlower.Amount { get; set; }
         string IFlower.Type { get; set; }
         string ICompost.Type { get; set; }
 
-    }*/
+        // Methods
+
+        public double Harvest()
+        {
+            return this._seeds;
+        }
+
+        public void Flower()
+        {
+            Console.WriteLine($"Sunflower {this._shortId} produced {this._amount} of seeds");
+        }
+        
+        public double Compost()
+        {
+            return _amount;
+        }
+
+        public void Resource()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
