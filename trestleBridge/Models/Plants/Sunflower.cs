@@ -7,6 +7,7 @@ using trestleBridge.Interfaces;
 
 namespace trestleBridge.Models.Plants
 {
+    /*
     public class Sunflower : IResource, ISeedProducing, IFlower, ICompost
     {
         private Guid _id = Guid.NewGuid();
@@ -27,5 +28,5 @@ namespace trestleBridge.Models.Plants
         string IFlower.Type { get; set; }
         string ICompost.Type { get; set; }
 
-    }
+    }*/
 }
