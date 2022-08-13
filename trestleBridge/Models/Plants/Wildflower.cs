@@ -21,7 +21,7 @@ namespace trestleBridge.Models.Plants
         }
 
         public string Type { get; } = "Wildflower";
-        object IResource.Type { get; set; }
+        string IResource.Type { get; }
         int IFlower.Amount { get; set; }
         string IFlower.Type { get; set; }
         string ICompost.Type { get; set; }

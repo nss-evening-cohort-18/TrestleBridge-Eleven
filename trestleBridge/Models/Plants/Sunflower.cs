@@ -24,7 +24,7 @@ namespace trestleBridge.Models.Plants
         }
 
         public string Type { get; } = "Sunflower";
-        object IResource.Type { get; set; }
+        string IResource.Type { get; }
         object ISeedProducing.Type { get; set; }
         int IFlower.Amount { get; set; }
         string IFlower.Type { get; set; }
