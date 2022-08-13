@@ -9,7 +9,7 @@ namespace trestleBridge.Interfaces
     public interface IResource
     {
         
-        object Type { get; set; }
+        string Type { get; }
         void Resource();
     }
 }

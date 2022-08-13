@@ -19,7 +19,7 @@ namespace trestleBridge.Actions
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
 
-          //  farm.PlowedField[choice].AddResource(flower);
+          farm.PlowedFields[choice-1].AddResource(flower);
 
             /*
                 Couldn't get this to work. Can you?
