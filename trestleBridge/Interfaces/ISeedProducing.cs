@@ -8,6 +8,7 @@ namespace trestleBridge.Interfaces
 {
     public interface ISeedProducing
     {
+        object Type { get; set; }
         double Harvest();
     }
 }

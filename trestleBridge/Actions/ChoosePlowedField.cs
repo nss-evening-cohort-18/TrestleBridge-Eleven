@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using trestleBridge.Interfaces;
 
 namespace trestleBridge.Actions
@@ -7,6 +11,13 @@ namespace trestleBridge.Actions
     {
         public static void CollectInput(Farm farm, IFlower flower)
         {
+
+            for (int i = 0; i < farm.PlowedFields.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}. Plowed Field");
+            }
+            Console.WriteLine();
+
             // Console.Clear();
             for (int i = 0; i < farm.PlowedFields.Count; i++)
             {
@@ -14,6 +25,7 @@ namespace trestleBridge.Actions
             }
             Console.WriteLine();
             // How can I output the type of animal chosen here?
+
             Console.WriteLine(value: $"Place {flower.Type} where?");
 
             Console.Write("> ");
@@ -26,6 +38,7 @@ namespace trestleBridge.Actions
                 Stretch goal. Only if the app is fully functional.
              */
             // farm.PurchaseResource<IGrazing>(animal, choice);
+
         }
     }
 }
