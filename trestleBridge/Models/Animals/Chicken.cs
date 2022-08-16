@@ -52,7 +52,7 @@ namespace trestleBridge.Models.Animals
 
         public override string ToString()
         {
-            return $"Chicken {this._shortId}. Cock-a-Doodle-doo!";
+            return $"Chicken {this._shortId}. Cock-a-Doodle-doo-ing!";
         }
 
         public void Resource()
