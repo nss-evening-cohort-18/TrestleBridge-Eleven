@@ -18,8 +18,15 @@ namespace trestleBridge.Actions
 
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
-
-            farm.GrazingFields[choice - 1].AddResource( animal);
+            if (farm.GrazingFields[choice - 1].currentCapacity < farm.GrazingFields[choice - 1].Capacity)
+            {
+                farm.GrazingFields[choice - 1].AddResource(animal);
+            }
+            else
+            {
+                farm.GrazingFields[choice - 1].atCapacity();
+            }
+            
 
             /*
                 Couldn't get this to work. Can you?

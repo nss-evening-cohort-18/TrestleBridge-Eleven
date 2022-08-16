@@ -14,6 +14,14 @@ namespace trestleBridge.Models.Facilities
 
         private List<IGrazing> _animals = new List<IGrazing>();
 
+
+        public double currentCapacity
+        {
+            get
+            {
+                return _animals.Count();
+            }
+        }
         public double Capacity
         {
             get
@@ -32,6 +40,11 @@ namespace trestleBridge.Models.Facilities
         {
             // TODO: implement this...
             throw new NotImplementedException();
+        }
+
+        public void atCapacity()
+        {
+            Console.WriteLine(@" Please select a different Duck House, this one is over capacity");
         }
         public override string ToString()
         {
